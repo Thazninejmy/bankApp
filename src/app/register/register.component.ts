@@ -18,9 +18,9 @@ export class RegisterComponent implements OnInit {
   // form group
 
   registerForm=this.fb.group({
-    acno:'',
-    pswd:'',
-    uname:''
+    acno:[''],
+    pswd:[''],
+    uname:['']
   })
   constructor(private ds:DataService,private router:Router,private fb:FormBuilder) { }
 
@@ -30,9 +30,9 @@ export class RegisterComponent implements OnInit {
   }
 
 register(){
-  var uname=this.uname
-  var acno=this.acno
-  var pswd=this.pswd
+  var uname=this.registerForm.value.uname
+  var acno=this.registerForm.value.acno
+  var pswd=this.registerForm.value.pswd
   const result=this.ds.register(uname,acno,pswd)
   if(result){
     alert("successfully registered")
