@@ -34,7 +34,7 @@ export class DataService {
       }
     }
   else {
-      alert("user does not exist!!!!!")
+      alert("user doesnot exist!!!!!")
       return false
     }
   }
