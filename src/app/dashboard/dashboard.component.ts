@@ -26,9 +26,11 @@ withdrawForm=this.fb.group({
   pswd1:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]],
   amount1:['',[Validators.required,Validators.pattern('[0-9 ]*')]]
 })
+user:any
 
-
-  constructor(private ds:DataService,private fb:FormBuilder) { }
+  constructor(private ds:DataService,private fb:FormBuilder) {
+    this.user=this.ds.currentUser
+   }
 
   ngOnInit(): void {
   }
@@ -60,7 +62,9 @@ withdrawForm=this.fb.group({
           alert(amount+"debited successfully and new balance is "+result)
         }
       }
-      
+      else{
+        alert("Invalid Form")
+      }
 
       
     }
