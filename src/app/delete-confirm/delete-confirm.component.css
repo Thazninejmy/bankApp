@@ -1,0 +1,14 @@
+div
+{
+    border: 2px solid wheat;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+}
+button{
+    margin-top: 20px;
+}
+#btn1{
+    margin-left: 30px;
+}

@@ -1,0 +1,9 @@
+table,th,tr{
+    border: 2px wheat solid;
+    color: bisque;
+    padding: 10px;
+    margin-left: 600px;
+    margin-right: auto;
+    font-size: 15px;
+
+}
